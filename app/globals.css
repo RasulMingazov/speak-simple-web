@@ -25,6 +25,44 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Scrollbars aligned with glass / dark UI */
+.se-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.22) rgba(255, 255, 255, 0.05);
+}
+
+.se-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.se-scrollbar::-webkit-scrollbar-track {
+  margin: 4px 0;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.se-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.se-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(34, 211, 238, 0.35);
+}
+
+/* Inset scrollbar ends so it reads better inside rounded panels (WebKit/Blink) */
+.se-scrollbar-chat::-webkit-scrollbar-track {
+  margin-block: 14px;
+  margin-inline-end: 4px;
+}
+
+.se-scrollbar-chat::-webkit-scrollbar-thumb {
+  min-height: 32px;
+}
+
 .se-aurora {
   position: fixed;
   inset: 0;
